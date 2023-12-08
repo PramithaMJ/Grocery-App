@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class CustomerTextField extends StatelessWidget {
@@ -28,11 +29,9 @@ class CustomerTextField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(color: AppColors.ash),
-          label: Text(
+          label: CustomText(
             labelText,
-            style: const TextStyle(
-              color: AppColors.ash,
-            ),
+            color: AppColors.ash,
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4),

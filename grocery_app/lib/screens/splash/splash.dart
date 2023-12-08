@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
+import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/screens/auth/signUp.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -15,10 +16,10 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Future.delayed(
-      Duration(seconds: 2),
+      const Duration(seconds: 2),
       () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Signup()));
+            context, MaterialPageRoute(builder: (context) => const Signup()));
       },
     );
 
@@ -32,22 +33,20 @@ class _SplashState extends State<Splash> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppLogo(
+            const AppLogo(
               width: 331,
               height: 225,
             ),
-            SizedBox(
+            const SizedBox(
               height: 72,
             ),
             FadeInUp(
-              child: const Text(
+              child: const CustomText(
                 "Shop your Daily\nNecessary",
+                size: 30,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.primaryColor,
-                ),
+                color: AppColors.primaryColor,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ],
