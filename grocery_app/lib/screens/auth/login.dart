@@ -4,17 +4,16 @@ import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/components/cutomer_button.dart';
-import 'package:grocery_app/screens/auth/login.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupState extends State<Signup> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +25,7 @@ class _SignupState extends State<Signup> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const CustomText(
-                  "SignUp",
+                  "Login",
                   size: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.w600,
@@ -37,13 +36,6 @@ class _SignupState extends State<Signup> {
                 const AppLogo(),
                 const SizedBox(
                   height: 30,
-                ),
-                const CustomerTextField(
-                  hintText: "Enter your UserName",
-                  labelText: "Username",
-                ),
-                const SizedBox(
-                  height: 10,
                 ),
                 const CustomerTextField(
                   hintText: "Enter your Email",
@@ -60,17 +52,12 @@ class _SignupState extends State<Signup> {
                 const SizedBox(
                   height: 10,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.centerRight,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Login()),
-                      );
-                    },
-                    child: const Text(
-                      "Already have an account?",
+                  child: Text(
+                    "Fogot your password?",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
@@ -78,7 +65,7 @@ class _SignupState extends State<Signup> {
                   height: 30,
                 ),
                 CustomButton(
-                  text: "Sign up",
+                  text: "Login",
                   onTap: () {},
                 )
               ],
@@ -89,3 +76,4 @@ class _SignupState extends State<Signup> {
     );
   }
 }
+//2 : 05
