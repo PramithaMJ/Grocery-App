@@ -17,13 +17,16 @@ class CustomerTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
-        BoxShadow(
-          color: AppColors.ash.withOpacity(.4),
-          offset: const Offset(0, 2),
-          blurRadius: 10,
-        )
-      ]),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.ash.withOpacity(.4),
+            offset: const Offset(0, 2),
+            blurRadius: 10,
+          )
+        ],
+      ),
       child: TextField(
         obscureText: isObscure,
         decoration: InputDecoration(
