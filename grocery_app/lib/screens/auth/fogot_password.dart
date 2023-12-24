@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,19 +9,18 @@ import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/components/cutomer_button.dart';
 import 'package:grocery_app/components/social_button.dart';
-import 'package:grocery_app/screens/auth/fogot_password.dart';
 import 'package:grocery_app/screens/auth/signup.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class FogotPassword extends StatefulWidget {
+  const FogotPassword({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<FogotPassword> createState() => _FogotPasswordState();
 }
 
-class _LoginState extends State<Login> {
+class _FogotPasswordState extends State<FogotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +36,7 @@ class _LoginState extends State<Login> {
                   child: CommonBackButton(),
                 ),
                 const CustomText(
-                  "Login",
+                  "Forgot Passsword",
                   size: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.w600,
@@ -45,50 +46,28 @@ class _LoginState extends State<Login> {
                 ),
                 const AppLogo(),
                 const SizedBox(
-                  height: 30,
+                  height: 100,
+                ),
+                const CustomText(
+                  "Please enter your email address. You will recieved a link to create a new password via email.",
+                  size: 14,
+                ),
+                const SizedBox(
+                  height: 16,
                 ),
                 const CustomerTextField(
                   hintText: "Enter your Email",
                   labelText: "Email",
                 ),
                 const SizedBox(
-                  height: 10,
-                ),
-                const CustomerTextField(
-                  hintText: "Enter your Password",
-                  labelText: "Password",
-                  isObscure: true,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FogotPassword()),
-                      );
-                    },
-                    child: const Text(
-                      "Fogot your password?",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
                   height: 30,
                 ),
                 CustomButton(
-                  text: "Login",
+                  text: "Sent Email",
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Signup()),
+                      MaterialPageRoute(builder: (context) => const Signup()),
                     );
                   },
                 ),
