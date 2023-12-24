@@ -43,7 +43,7 @@ class _SplashState extends State<Splash> {
             FadeInUp(
               child: const CustomText(
                 "Shop your Daily\nNecessary",
-                size: 30,
+                fontSize: 30,
                 textAlign: TextAlign.center,
                 color: AppColors.primaryColor,
                 fontWeight: FontWeight.w500,

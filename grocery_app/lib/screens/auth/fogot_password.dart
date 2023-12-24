@@ -37,7 +37,7 @@ class _FogotPasswordState extends State<FogotPassword> {
                 ),
                 const CustomText(
                   "Forgot Passsword",
-                  size: 25,
+                  fontSize: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.w600,
                 ),
@@ -50,7 +50,7 @@ class _FogotPasswordState extends State<FogotPassword> {
                 ),
                 const CustomText(
                   "Please enter your email address. You will recieved a link to create a new password via email.",
-                  size: 14,
+                  fontSize: 14,
                 ),
                 const SizedBox(
                   height: 16,
@@ -76,7 +76,7 @@ class _FogotPasswordState extends State<FogotPassword> {
                 ),
                 const CustomText(
                   "or login with social account",
-                  size: 14,
+                  fontSize: 14,
                 ),
                 const SizedBox(
                   height: 12,

@@ -8,7 +8,7 @@ import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/components/cutomer_button.dart';
 import 'package:grocery_app/components/social_button.dart';
 import 'package:grocery_app/screens/auth/fogot_password.dart';
-import 'package:grocery_app/screens/auth/signup.dart';
+import 'package:grocery_app/screens/main/main_screen.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -36,7 +36,7 @@ class _LoginState extends State<Login> {
                 ),
                 const CustomText(
                   "Login",
-                  size: 25,
+                  fontSize: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.w600,
                 ),
@@ -88,7 +88,7 @@ class _LoginState extends State<Login> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Signup()),
+                      MaterialPageRoute(builder: (context) => MainScreen()),
                     );
                   },
                 ),
@@ -97,7 +97,7 @@ class _LoginState extends State<Login> {
                 ),
                 const CustomText(
                   "or login with social account",
-                  size: 14,
+                  fontSize: 14,
                 ),
                 const SizedBox(
                   height: 12,

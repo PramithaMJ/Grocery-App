@@ -27,7 +27,7 @@ class _SignupState extends State<Signup> {
               children: [
                 const CustomText(
                   "SignUp",
-                  size: 25,
+                  fontSize: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.w600,
                 ),

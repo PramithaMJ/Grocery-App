@@ -6,14 +6,14 @@ class CustomText extends StatelessWidget {
   const CustomText(
     this.text, {
     super.key,
-    this.size,
+    this.fontSize,
     this.fontWeight,
     this.color,
     this.textAlign,
   });
 
   final String text;
-  final double? size;
+  final double? fontSize;
   final FontWeight? fontWeight;
   final Color? color;
   final TextAlign? textAlign;
@@ -24,7 +24,7 @@ class CustomText extends StatelessWidget {
       text,
       textAlign: textAlign,
       style: GoogleFonts.poppins(
-        fontSize: size,
+        fontSize: fontSize,
         fontWeight: fontWeight,
         color: color,
       ),
